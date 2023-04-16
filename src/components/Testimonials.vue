@@ -1,11 +1,11 @@
 <template>
-    <v-container fluid class="bg-grey-lighten-2">
-        <v-card class="testimonials-heading text-center bg-transparent pb-0" variant="default">
+    <v-container fluid class="bg-grey-lighten-2 py-10">
+        <v-card class="text-center bg-transparent pb-0" variant="default">
             <v-card-title class="text-h4 text-primary font-weight-bold mb-2">Testimonials</v-card-title>
-            <v-card-text class="text-medium-emphasis text-primary text-h6 pb-0">Real Success Stories: Hear from Thriving Clients.
+            <v-card-text class="text-medium-emphasis text-h6 pb-0">Real Success Stories: Hear from Thriving Clients.
             </v-card-text>
         </v-card>
-        <v-carousel class="bg-transparent mt-0 pt-0" cycle height="400" hide-delimiter-background show-arrows="hover">
+        <v-carousel class="bg-transparent mt-0 pt-0" cycle height="320" hide-delimiter-background show-arrows="hover">
             <v-carousel-item v-for="(slide, i) in slides" :key="i">
                 <v-sheet class="bg-transparent" height="100%">
                     <div class="d-flex fill-height justify-center align-center">
@@ -75,10 +75,6 @@ export default {
 }
 </script>
 <style scoped>
-.testimonials-heading {
-    padding-top: 2rem;
-}
-
 .carousel-card {
     padding-top: 1rem;
     border-top: 1px solid #1976D2;

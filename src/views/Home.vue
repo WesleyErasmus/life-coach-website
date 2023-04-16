@@ -14,6 +14,9 @@
 
       <!-- Testimonials Component -->
       <Testimonials/>
+
+      <!-- Let's get to Work Component -->
+      <Work/>
     
     </v-main>
   </v-app>
@@ -24,12 +27,14 @@ import Hero from '../components/Hero.vue';
 import Services from '../components/Services.vue';
 import About from '../components/About.vue';
 import Testimonials from '../components/Testimonials.vue';
+import Work from '../components/Work.vue';
 export default {
   components: {
     Hero,
     Services,
     About,
     Testimonials,
+    Work,
   }
 };
 </script>
