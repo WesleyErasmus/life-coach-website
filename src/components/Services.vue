@@ -14,7 +14,7 @@
 
                                 </v-card-title>
                                 <v-card-text>
-                                    <p class="text-caption font-weight-medium text-medium-emphasis">
+                                    <p class="text-body-2 font-weight-medium text-medium-emphasis">
                                         {{ item.subtext }}
                                     </p>
                                 </v-card-text>

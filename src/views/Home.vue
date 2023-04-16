@@ -7,6 +7,9 @@
 
       <!-- Services Component -->
       <Services />
+
+      <!-- About Component -->
+      <About/>
     
     </v-main>
   </v-app>
@@ -15,10 +18,12 @@
 // Home Page Components
 import Hero from '../components/Hero.vue';
 import Services from '../components/Services.vue';
+import About from '../components/About.vue';
 export default {
   components: {
     Hero,
     Services,
+    About,
   }
 };
 </script>

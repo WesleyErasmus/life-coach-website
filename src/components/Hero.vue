@@ -6,7 +6,7 @@
             <v-col class="d-flex justify-center" md="6">
                 <v-card class="hero-card bg-transparent" variant="none">
                     <v-card-item class="text-white">
-                        <div class="text-h3 mb-4">
+                        <div class="text-h3 mb-4 font-weight-bold">
                             Strategic Life Coaching
                         </div>
                         <p class="text-body-1 mb-4 pl-1">
