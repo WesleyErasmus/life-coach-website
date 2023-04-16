@@ -1,0 +1,6 @@
+@import "./button.css";
+/* App root variables */
+:root {
+    --primary-color: ;
+    --primary-gradient-bg: linear-gradient(to right, #0074D9, #4DC0B5);
+}
