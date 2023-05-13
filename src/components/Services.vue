@@ -1,25 +1,30 @@
 <template>
-    <v-container class="my-15">
-        <v-row class="fill-height" align="center" justify="center">
+    <v-container class="mt-16 mb-10">
+        <v-row class="fill-height" align="start" justify="center">
             <template v-for="(item, i) in items" :key="i">
                 <v-col cols="12" md="3">
                     <v-hover v-slot="{ isHovering, props }">
-                        <v-card class="pa-4 elevation-0" :variant="isHovering ? 'tonal' : undefined" :color="isHovering ? 'primary' : undefined" v-bind="props">
+                        <v-card class="pa-4 elevation-0" :variant="isHovering ? 'tonal' : undefined"
+                            :color="isHovering ? 'primary' : undefined" v-bind="props">
                             <div>
-                                <img class="services-card-images-top" :src="item.img" alt="Services-card-images">
-                                <v-card-title class="text-h6 d-flex flex-column">
-                                    <p class="mt-4">
+                                <div class="img-container">
+                                    <img class="services-card-images-top" :src="item.img" alt="Services-card-images">
+                                </div>
+                                <v-card-text class="card-title-container text-h6 font-weight-bold d-flex flex-column">
+                                    <p class="mt-0">
                                         {{ item.title }}
                                     </p>
-
-                                </v-card-title>
+                                </v-card-text>
                                 <v-card-text>
-                                    <p class="text-body-2 font-weight-medium text-medium-emphasis">
-                                        {{ item.subtext }}
+                                    <p class="card-text-container text-body-2 font-weight-medium text-medium-emphasis">
+                                        {{ shortSubtext[i] }}
                                     </p>
                                 </v-card-text>
-                                <v-card-actions>
-                                    <v-btn variant="tonal" icon="mdi-arrow-right-thin"></v-btn>
+                                <v-card-actions class="mt-0 pt-0">
+                                    <v-btn class="rounded-pill px-4" size="small" variant="outlined" color="primary"
+                                        prepend-icon="mdi-arrow-right-thin">
+                                        See More
+                                    </v-btn>
                                 </v-card-actions>
                             </div>
                         </v-card>
@@ -35,34 +40,39 @@ export default {
         items: [
             {
                 img: '../../public/icons/chart.png',
-                title: 'Reach Your Goals',
-                text: `It's New Release Friday`,
-                subtext: 'Setting and achieving specific, measurable, and meaningful goals through effective planning, motivation, and action strategies.',
+                title: 'Setting Your Course',
+                subtext: 'A personalized approach to assist individuals in setting and achieving specific goals through effective planning, and action strategies. I help individuals identify their priorities, develop a road map, and overcome obstacles to reach their desired outcomes and create a fulfilling life.',
 
             },
             {
                 img: '../../public/icons/goal.png',
-                title: 'Career Growth',
-                text: 'Greatest Rock Hits',
-                subtext: 'Advancing professional skills, achieving career goals, and improving job prospects for career advancement and success.',
+                title: 'Getting Your Career Back On Track',
+                subtext: 'My "Getting Your Career Back On Track" coaching service provides a supportive and tailored approach to help individuals improve their professional skills, set achievable career goals, and enhance job prospects for career advancement and success. Our experienced career coaches assist in exploring individual interests, values, strengths, and provide strategic planning to help individuals reach their full potential.',
 
             },
             {
                 img: '../../public/icons/balance.png',
-                title: 'Lifestyle Balance',
-                text: 'Ambient Bass',
-                subtext: 'Striking a healthy balance between work, personal life, health, and well-being for improved overall quality of life.',
+                title: 'Finding Traction In Your Relationships',
+                subtext: 'A depth of forgiveness and spiritual well being. With the aid of a relational eco- map we will journey through the process of conflict.finding a deeper sense of identity - The quest for spirituality(SQ) and the value of emotional intelligence as a people leader.',
 
             },
             {
                 img: '../../public/icons/interview.png',
-                title: 'Interview Preparation',
-                text: 'Ambient Bass',
-                subtext: 'Coaching and guidance to prepare for job interviews, including mock interviews, resume review, and interview techniques.',
+                title: 'Thinking Like a Leader',
+                subtext: 'Developing good habits early on through the use of a habit tracker and journaling. Be willing to explore your circle of influence whilst setting up a strategic plan for your business sphere and life.The use of vision boards, life swots and key questions will assist us in moving form “Here to There"',
 
             },
         ],
     }),
+    computed: {
+        shortSubtext() {
+            return this.items.map(item => {
+                const words = item.subtext.split(' ')
+                return words.slice(0, 25).join(' ') + (words.length > 25 ? '...' : '')
+            })
+        }
+    }
+
 }
 </script>
 <style scoped>
@@ -70,8 +80,40 @@ export default {
     width: 55px;
     margin-left: 1rem;
 }
+
+.card-title-container {
+    height: 55px;
+}
+
+.card-text-container {
+    height: 120px;
+    overflow: hidden;
+    position: relative;
+}
+
 .v-card:hover {
-  border-top: 2px solid #1976D2;
-  cursor: pointer;
+    border-top: 2px solid #1976D2;
+    cursor: pointer;
+}
+
+@media (max-width: 959px) {
+    .services-card-images-top {
+        width: 85px;
+        margin-left: 1rem;
+    }
+}
+
+@media (max-width: 736px) {
+    .img-container {
+        text-align: center;
+    }
+
+    .services-card-images-top {
+        width: 105px;
+    }
+
+    .v-card-title {
+        text-align: center;
+    }
 }
 </style>

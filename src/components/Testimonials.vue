@@ -1,15 +1,15 @@
 <template>
-    <v-container fluid class="bg-grey-lighten-2 py-10">
+    <div class="bg-grey-lighten-4 py-15">
         <v-card class="text-center bg-transparent pb-0" variant="default">
             <v-card-title class="text-h4 text-primary font-weight-bold mb-2">Testimonials</v-card-title>
-            <v-card-text class="text-medium-emphasis text-h6 pb-0">Real Success Stories: Hear from Thriving Clients.
+            <v-card-text class="text-medium-emphasis text-h6 mb-7">Real Success Stories: Hear from Thriving Clients.
             </v-card-text>
         </v-card>
-        <v-carousel class="bg-transparent mt-0 pt-0" cycle height="320" hide-delimiter-background show-arrows="hover">
+        <v-carousel class="bg-transparent" cycle height="340" hide-delimiter-background show-arrows="hover">
             <v-carousel-item v-for="(slide, i) in slides" :key="i">
                 <v-sheet class="bg-transparent" height="100%">
-                    <div class="d-flex fill-height justify-center align-center">
-                        <v-card class="carousel-card mx-auto bg-transparent" variant="default" max-width="480">
+                    <div class="d-flex fill-height justify-center align-start">
+                        <v-card class="carousel-card mx-auto elevation-0 pa-3" max-width="680">
                             <v-card-text class="text-body-2 text-medium-emphasis py-2">
                                 <v-icon color="primary">mdi-format-quote-open</v-icon>
                                 {{ slide.testimonial }}
@@ -33,7 +33,7 @@
                 </v-sheet>
             </v-carousel-item>
         </v-carousel>
-    </v-container>
+    </div>
 </template>
 
 <script>
@@ -77,7 +77,22 @@ export default {
 <style scoped>
 .carousel-card {
     padding-top: 1rem;
-    border-top: 1px solid #1976D2;
+    border-top: 2px solid #1976D2;
     border-radius: 0px;
+}
+@media (max-width: 890px) {
+  /* .v-window__next, .v-window__prev {
+  display: none !important;
+}
+  .v-window__left, .v-window__right {
+  visibility: hidden !important;
+}
+.v-window__controls {
+    display: none !important;
+  }
+
+  .v-btn, button {
+    display: none !important;
+  } */
 }
 </style>

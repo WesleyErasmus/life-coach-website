@@ -4,3 +4,8 @@
     --primary-color: ;
     --primary-gradient-bg: linear-gradient(to right, #0074D9, #4DC0B5);
 }
+
+/* App content max-width */
+.v-container {
+    max-width: 1240px !important;
+}

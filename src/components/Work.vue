@@ -1,9 +1,9 @@
 <template>
     <!-- Main content -->
-    <v-card class="hero-banner" color="primary">
+    <v-card class="card-container" color="primary">
         <v-container>
-            <v-card class="hero-card bg-transparent" variant="default">
-                <div class="d-flex justify-center align-items-center">
+            <v-card class="bg-transparent" variant="default">
+                <div class="card-contents-flex-container d-flex justify-space-between align-items-center">
                     <v-card-item class="card-text-container text-white flex-grow-1">
                         <div class="text-h4 mb-4 font-weight-bold">
                             Let's get to work
@@ -13,7 +13,7 @@
                             and Start Your Transformation.
                         </div>
                     </v-card-item>
-                    <v-card-actions>
+                    <v-card-actions class="contact-btn-container">
                         <v-btn class="rounded-pill px-8 py-2" variant="elevated" size="large">Get In
                             Touch</v-btn>
                     </v-card-actions>
@@ -32,23 +32,31 @@ export default {
 </script>
 
 <style scoped>
-.hero-banner {
-    /* background: var(--primary-gradient-bg); */
-    /* Fallback for older browsers */
-    /* background: -webkit-linear-gradient(to right, #0074D9, #4DC0B5);
-    background: -moz-linear-gradient(to right, #0074D9, #4DC0B5);
-    background: -o-linear-gradient(to right, #0074D9, #4DC0B5);
-    background-size: cover; */
-    padding: 2rem 0;
-}
-
-.hero-card {
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
+.card-container {
+    padding: 1rem 0;
 }
 
 .card-text-container {
-    max-width: 80%;
+    max-width: 70%;
 }
-</style>
+
+@media only screen and (max-width: 767px) {
+    .card-text-container {
+        max-width: 100%;
+    }
+
+    .card-text-container div {
+        font-size: 1.5rem;
+        line-height: 1.5;
+        text-align: center;
+    }
+
+    .card-contents-flex-container {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .contact-btn-container {
+        padding-top: 1rem;
+    }
+}</style>

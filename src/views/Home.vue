@@ -1,11 +1,10 @@
 <template>
  <v-app>
-    <v-main>
-      <div>Make a my experience section</div>
-      
+    <v-main>    
       <!-- Hero Component -->
-      <Hero />
+      <Hero @click="scrollToAnchor" />
 
+      <div id="anchor"></div>
       <!-- Services Component -->
       <Services />
 
@@ -17,6 +16,9 @@
 
       <!-- Let's get to Work Component -->
       <Work/>
+
+      <!-- Contact footer Component -->
+      <Contact/>
     
     </v-main>
   </v-app>
@@ -28,6 +30,7 @@ import Services from '../components/Services.vue';
 import About from '../components/About.vue';
 import Testimonials from '../components/Testimonials.vue';
 import Work from '../components/Work.vue';
+import Contact from '../components/Contact.vue';
 export default {
   components: {
     Hero,
@@ -35,6 +38,13 @@ export default {
     About,
     Testimonials,
     Work,
-  }
+    Contact,
+  },
+    methods: {
+    scrollToAnchor() {
+      const element = document.getElementById("anchor");
+      element.scrollIntoView({ behavior: "smooth" });
+    },
+  },
 };
 </script>
