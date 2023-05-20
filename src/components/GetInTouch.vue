@@ -9,13 +9,17 @@
                             Let's get to work
                         </div>
                         <div class="text-white text-subtitle-1">
-                            Unlock Your Full Potential with Strategic Life Coaching. Contact Us Today to Schedule a Session
+                            Get back on track with Strategic Life Coaching. Get In Touch to Schedule a Session
                             and Start Your Transformation.
                         </div>
                     </v-card-item>
                     <v-card-actions class="contact-btn-container">
-                        <v-btn class="rounded-pill px-8 py-2" variant="elevated" size="large">Get In
-                            Touch</v-btn>
+                        <v-btn class="rounded-pill px-8 py-2" variant="elevated" size="large">
+                            <a href="mailto:daryl@ontrackcoaching.co.za?subject=Online Coaching Enquiry"
+                                class="text-decoration-none text-black">
+                                Get In Touch
+                            </a>
+                        </v-btn>
                     </v-card-actions>
                 </div>
             </v-card>
@@ -59,4 +63,5 @@ export default {
     .contact-btn-container {
         padding-top: 1rem;
     }
-}</style>
+}
+</style>

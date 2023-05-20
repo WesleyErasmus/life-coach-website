@@ -15,7 +15,7 @@
       <Testimonials/>
 
       <!-- Let's get to Work Component -->
-      <Work/>
+      <GetInTouch/>
 
       <!-- Contact footer Component -->
       <Contact/>
@@ -29,7 +29,7 @@ import Hero from '../components/Hero.vue';
 import Services from '../components/Services.vue';
 import About from '../components/About.vue';
 import Testimonials from '../components/Testimonials.vue';
-import Work from '../components/Work.vue';
+import GetInTouch from '../components/GetInTouch.vue';
 import Contact from '../components/Contact.vue';
 export default {
   components: {
@@ -37,7 +37,7 @@ export default {
     Services,
     About,
     Testimonials,
-    Work,
+    GetInTouch,
     Contact,
   },
     methods: {
